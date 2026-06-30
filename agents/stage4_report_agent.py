@@ -170,6 +170,10 @@ def _run(state: dict) -> dict:
     warning_items  = [c for c in consensus if c["consensus_level"] == "warning"]
     pass_count     = sum(1 for c in consensus if c["consensus_level"] == "pass")
 
+    grade = "A" if scores["weighted_final"] >= 90 else \
+            "B" if scores["weighted_final"] >= 75 else \
+            "C" if scores["weighted_final"] >= 60 else "D"
+
     report = {
         "metadata": {
             "pipeline_id":  state.get("pipeline_id"),
@@ -177,6 +181,7 @@ def _run(state: dict) -> dict:
             "generated_at": datetime.now().isoformat(),
             "total_records": state.get("total_records"),
         },
+        "grade": grade,
         "scores": scores,
         "consensus_summary": {
             "critical_fields": len(critical_items),
@@ -192,7 +197,9 @@ def _run(state: dict) -> dict:
             "issue_count":   len(stage3a.get("issues", [])),
             "summary":       stage3a.get("summary", ""),
         },
-        "stage3b_summary": stage3b.get("summary", {}),
+        "stage3b_summary":   stage3b.get("summary", {}),
+        "rule_violations":   state.get("rule_violations", []),
+        "changelog":         state.get("changelog", []),
         "preprocessed_data": state.get("preprocessed_data", []),
     }
 
