@@ -1,0 +1,5 @@
+{"id": 1, "name": "Alice Kim", "birth_date": "1990-03-15", "age": 35, "email": "alice.kim@example.com", "salary": 55000, "country": "KR"}
+{"id": 2, "name": "bob lee", "birth_date": "2099-07-22", "age": -5, "email": "not-an-email", "salary": 9999999999, "country": "ZZ"}
+{"id": 3, "name": "Charlie Park", "birth_date": "1985-11-30", "age": null, "email": "charlie@corp.co.kr", "salary": 72000, "country": "KR"}
+{"id": 4, "name": "Diana Choi", "birth_date": "1992-08-10", "age": 33, "email": "diana@startup.io", "salary": 68000, "country": "KR"}
+{"id": 5, "name": "edward kim", "birth_date": null, "age": 25, "email": "edward@", "salary": -1000, "country": null}

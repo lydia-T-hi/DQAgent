@@ -1,0 +1,6 @@
+id,name,birth_date,age,email,phone,salary,job_title,country,joined_at
+1,Alice Kim,1990-03-15,35,alice.kim@example.com,010-1234-5678,55000,Software Engineer,KR,2020/01/10
+2,bob lee,2099-07-22,-5,not-an-email,,9999999999,intern,ZZ,2015-13-40
+3,Charlie Park,1985-11-30,,charlie@corp.co.kr,02-555-9999,72000,Product Manager,KR,2018-06-01
+4,Diana Choi,1992-08-10,33,diana@startup.io,010-9876-5432,68000,Data Scientist,KR,2021-03-15
+5,edward kim,,25,edward@,010-0000-0000,-1000,,,
